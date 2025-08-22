@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HorecaDepot - Professional Furniture & Equipment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .modern-btn {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            border: none;
+            border-radius: 12px;
+            padding: 12px 24px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+        
+        .modern-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+        }
+        
+        .modern-btn-secondary {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 12px 24px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            color: #374151;
+        }
+        
+        .modern-btn-secondary:hover {
+            border-color: #3b82f6;
+            color: #3b82f6;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-btn {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            min-width: 44px;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .nav-btn:hover {
+            border-color: #3b82f6;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+        }
+        
+        .product-card {
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .carousel-container {
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .carousel-track {
+            display: flex;
+            transition: transform 0.3s ease;
+            width: 100%;
+        }
+        
+        .carousel-item {
+            flex: 0 0 100%;
+            padding: 0 8px;
+        }
+        
+        @media (min-width: 640px) {
+            .carousel-item {
+                flex: 0 0 50%;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .carousel-item {
+                flex: 0 0 25%;
+            }
+        }
+        
+        .hero-gradient-1 {
+            background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+        }
+        
+        .hero-gradient-2 {
+            background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
+        }
+        
+        .hero-gradient-3 {
+            background: linear-gradient(135deg, #4b5563 0%, #6b7280 100%);
+        }
+        
+        .banner-gradient-1 {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+        }
+        
+        .banner-gradient-2 {
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <!-- Top Row - Hidden on mobile -->
+        <div class="hidden sm:block border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center py-2 text-base">
+                    <div class="flex items-center space-x-4 sm:space-x-6">
+                        <a href="/stores" class="flex items-center text-gray-600 hover:text-blue-600 transition-colors">
+                            <i class="fas fa-map-marker-alt mr-2 text-lg sm:text-base"></i>
+                            <span class="inline sm:inline">Find Store</span>
+                        </a>
+                        <a href="tel:+32123456789" class="flex items-center text-gray-600 hover:text-blue-600 transition-colors">
+                            <i class="fas fa-phone mr-2 text-lg sm:text-base"></i>
+                            <span class="inline sm:inline">+32 12 345 67 89</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Desktop Navigation -->
+                    <nav class="hidden md:flex items-center space-x-6">
+                        <a href="/projects" class="text-gray-600 hover:text-blue-600 transition-colors">Projects</a>
+                        <a href="/references" class="text-gray-600 hover:text-blue-600 transition-colors">References</a>
+                        <a href="/contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+                        <a href="/about" class="text-gray-600 hover:text-blue-600 transition-colors">About</a>
+                    </nav>
+                    
+
+                    
+                    <div class="flex items-center space-x-2 sm:space-x-4">
+                        <div class="flex items-center text-yellow-500">
+                            <i class="fab fa-google mr-2"></i>
+                            <span class="text-gray-600">4.8</span>
+                            <div class="flex ml-2">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                            </div>
+                        </div>
+                        <select class="text-gray-600 bg-transparent border-none">
+                            <option>EN</option>
+                            <option>NL</option>
+                            <option>FR</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Header Row -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Mobile Header Layout -->
+            <div class="sm:hidden">
+                <div class="flex justify-between items-center py-4">
+                    <!-- Mobile Menu Button -->
+                    <button onclick="toggleMobileMenu()" class="nav-btn">
+                        <i class="fas fa-bars text-gray-600"></i>
+                    </button>
+                    
+                    <!-- Logo -->
+                    <h1 class="text-2xl font-bold text-gray-900">HorecaDepot</h1>
+                    
+                    <!-- Shopping Cart -->
+                    <a href="#cart" class="flex flex-col items-center text-gray-600 hover:text-blue-600 transition-colors relative">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span class="absolute -top-1 -right-1 bg-blue-600 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">2</span>
+                    </a>
+                </div>
+                
+                <!-- Mobile Search Bar -->
+                <div class="pb-4">
+                    <div class="flex items-center bg-gray-100 rounded-lg px-4 py-3">
+                        <input type="text" id="mobileSearchInput" placeholder="Search products..." class="bg-transparent flex-1 outline-none text-sm">
+                        <button onclick="performMobileSearch()" class="text-gray-400 hover:text-gray-600 ml-2">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Desktop Header Layout -->
+            <div class="hidden sm:flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <h1 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900">HorecaDepot</h1>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button onclick="openCategoriesModal()" class="modern-btn text-white text-sm items-center inline-flex">
+                        <i class="fas fa-th-large mr-2"></i>
+                        Categories
+                    </button>
+                    
+                    <!-- Desktop Search -->
+                    <div class="hidden lg:flex items-center bg-gray-100 rounded-lg px-4 py-2 w-64 xl:w-80">
+                        <input type="text" id="searchInput" placeholder="Search products..." class="bg-transparent flex-1 outline-none text-sm">
+                        <button onclick="performSearch()" class="text-gray-400 hover:text-gray-600">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    
+
+                    
+                    <div class="flex items-center space-x-3">
+                        <a href="#account" class="flex flex-col items-center text-gray-600 hover:text-blue-600 transition-colors">
+                            <i class="fas fa-user text-xl"></i>
+                            <span class="text-xs">Account</span>
+                        </a>
+                        <a href="#wishlist" class="flex flex-col items-center text-gray-600 hover:text-blue-600 transition-colors relative">
+                            <i class="fas fa-heart text-xl"></i>
+                            <span class="text-xs">Wishlist</span>
+                            <span class="absolute -top-1 -right-1 bg-blue-600 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">3</span>
+                        </a>
+                        <a href="#cart" class="flex flex-col items-center text-gray-600 hover:text-blue-600 transition-colors relative">
+                            <i class="fas fa-shopping-cart text-xl"></i>
+                            <span class="text-xs">Cart</span>
+                            <span class="absolute -top-1 -right-1 bg-blue-600 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">2</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tablet Search Bar -->
+            <div id="mobileSearch" class="hidden sm:block lg:hidden pb-4">
+                <div class="flex items-center bg-gray-100 rounded-lg px-4 py-3">
+                    <input type="text" id="tabletSearchInput" placeholder="Search products..." class="bg-transparent flex-1 outline-none text-sm">
+                    <button onclick="performTabletSearch()" class="text-gray-400 hover:text-gray-600 ml-2">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobileMenu" class="hidden sm:hidden bg-white border-t border-gray-200 shadow-lg">
+                <div class="max-w-7xl mx-auto px-4 py-2">
+                    <nav class="flex flex-col space-y-1">
+                        <!-- Language Selector -->
+                        <div class="flex items-center justify-between py-1.5 border-b border-gray-200">
+                            <span class="text-gray-600 font-medium text-sm">Language</span>
+                            <select class="text-gray-600 bg-transparent border border-gray-300 rounded px-2 py-1 text-sm">
+                                <option>🇬🇧 EN</option>
+                                <option>🇳🇱 NL</option>
+                                <option>🇫🇷 FR</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Shop Section -->
+                        <div class="py-1">
+                            <a href="/shop" class="block text-gray-600 hover:text-blue-600 transition-colors py-1.5 font-medium text-sm">Shop</a>
+                            <a href="/outlet" class="block text-gray-600 hover:text-blue-600 transition-colors py-1.5 text-sm">Outlet</a>
+                        </div>
+                        
+                        <!-- Account Section -->
+                        <div class="py-1 border-t border-gray-200">
+                            <a href="/account" class="block text-gray-600 hover:text-blue-600 transition-colors py-1.5 text-sm">Account</a>
+                            <a href="/wishlist" class="block text-gray-600 hover:text-blue-600 transition-colors py-1.5 text-sm">Wishlist</a>
+                        </div>
+                        
+                        <!-- Info Section -->
+                        <div class="py-1 border-t border-gray-200">
+                            <a href="/projects" class="block text-gray-600 hover:text-blue-600 transition-colors py-1.5 text-sm">Projects</a>
+                            <a href="/references" class="block text-gray-600 hover:text-blue-600 transition-colors py-1.5 text-sm">References</a>
+                            <a href="/contact" class="block text-gray-600 hover:text-blue-600 transition-colors py-1.5 text-sm">Contact</a>
+                            <a href="/about" class="block text-gray-600 hover:text-blue-600 transition-colors py-1.5 text-sm">About us</a>
+                            <a href="/parking" class="block text-gray-600 hover:text-blue-600 transition-colors py-1.5 text-sm">Parking</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-6 sm:py-8 lg:py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="relative">
+                <!-- Navigation Buttons -->
+                <button onclick="previousHero()" class="absolute left-4 top-3/4 sm:top-1/2 transform -translate-y-1/2 z-10 bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full p-3 shadow-lg transition-all duration-300">
+                    <i class="fas fa-chevron-left text-gray-700 text-xl"></i>
+                </button>
+                <button onclick="nextHero()" class="absolute right-4 top-3/4 sm:top-1/2 transform -translate-y-1/2 z-10 bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full p-3 shadow-lg transition-all duration-300">
+                    <i class="fas fa-chevron-right text-gray-700 text-xl"></i>
+                </button>
+                
+                <!-- Hero Slides -->
+                <div class="overflow-hidden rounded-3xl shadow-2xl">
+                    <div class="flex transition-transform duration-500 ease-in-out" id="heroTrack">
+                        <!-- Slide 1 -->
+                        <div class="w-full flex-shrink-0">
+                            <div class="hero-gradient-1 relative h-[400px] sm:h-[500px] lg:h-[600px] flex items-center">
+                                <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                                <div class="relative z-10 max-w-7xl mx-auto px-8 sm:px-12 lg:px-16 text-white">
+                                    <div class="max-w-2xl">
+                                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Professional Furniture</h1>
+                                        <p class="text-xl sm:text-2xl mb-8 opacity-90 leading-relaxed">Complete solutions for restaurants and hotels with premium quality and modern design</p>
+                                        <button onclick="window.location.href='/categories/furniture'" class="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg">Shop Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 2 -->
+                        <div class="w-full flex-shrink-0">
+                            <div class="hero-gradient-2 relative h-[400px] sm:h-[500px] lg:h-[600px] flex items-center">
+                                <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                                <div class="relative z-10 max-w-7xl mx-auto px-8 sm:px-12 lg:px-16 text-white">
+                                    <div class="max-w-2xl">
+                                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Kitchen Equipment</h1>
+                                        <p class="text-xl sm:text-2xl mb-8 opacity-90 leading-relaxed">Professional grade kitchen solutions for commercial restaurants and catering businesses</p>
+                                        <button onclick="window.location.href='/categories/kitchen'" class="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg">Explore</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 3 -->
+                        <div class="w-full flex-shrink-0">
+                            <div class="hero-gradient-3 relative h-[400px] sm:h-[500px] lg:h-[600px] flex items-center">
+                                <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                                <div class="relative z-10 max-w-7xl mx-auto px-8 sm:px-12 lg:px-16 text-white">
+                                    <div class="max-w-2xl">
+                                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Special Offers</h1>
+                                        <p class="text-xl sm:text-2xl mb-8 opacity-90 leading-relaxed">Up to 40% off selected items - Limited time deals on premium furniture collections</p>
+                                        <button onclick="window.location.href='/offers'" class="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg">View Deals</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 4 -->
+                        <div class="w-full flex-shrink-0">
+                            <div class="hero-gradient-1 relative h-[400px] sm:h-[500px] lg:h-[600px] flex items-center">
+                                <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                                <div class="relative z-10 max-w-7xl mx-auto px-8 sm:px-12 lg:px-16 text-white">
+                                    <div class="max-w-2xl">
+                                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Hotel Solutions</h1>
+                                        <p class="text-xl sm:text-2xl mb-8 opacity-90 leading-relaxed">Complete hotel furniture packages designed for luxury hospitality experiences</p>
+                                        <button onclick="window.location.href='/categories/hotel'" class="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg">Discover</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide Indicators -->
+                <div class="flex justify-center mt-6 space-x-2">
+                    <button onclick="goToHeroSlide(0)" class="hero-indicator w-3 h-3 rounded-full bg-gray-300 transition-colors" data-slide="0"></button>
+                    <button onclick="goToHeroSlide(1)" class="hero-indicator w-3 h-3 rounded-full bg-gray-300 transition-colors" data-slide="1"></button>
+                    <button onclick="goToHeroSlide(2)" class="hero-indicator w-3 h-3 rounded-full bg-gray-300 transition-colors" data-slide="2"></button>
+                    <button onclick="goToHeroSlide(3)" class="hero-indicator w-3 h-3 rounded-full bg-gray-300 transition-colors" data-slide="3"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-12 sm:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 sm:mb-12 text-center">Shop by Category</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8">
+                <a href="/categories/chairs" class="text-center group cursor-pointer">
+                    <div class="bg-gray-100 rounded-xl p-4 sm:p-6 lg:p-8 mb-3 group-hover:bg-gray-200 transition-colors">
+                        <i class="fas fa-chair text-2xl sm:text-3xl lg:text-4xl text-gray-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 text-sm sm:text-base">Dining Chairs</h3>
+                </a>
+                <a href="/categories/tables" class="text-center group cursor-pointer">
+                    <div class="bg-gray-100 rounded-xl p-4 sm:p-6 lg:p-8 mb-3 group-hover:bg-gray-200 transition-colors">
+                        <i class="fas fa-table text-2xl sm:text-3xl lg:text-4xl text-gray-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 text-sm sm:text-base">Tables</h3>
+                </a>
+                <a href="/categories/sofas" class="text-center group cursor-pointer">
+                    <div class="bg-gray-100 rounded-xl p-4 sm:p-6 lg:p-8 mb-3 group-hover:bg-gray-200 transition-colors">
+                        <i class="fas fa-couch text-2xl sm:text-3xl lg:text-4xl text-gray-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 text-sm sm:text-base">Sofas</h3>
+                </a>
+                <a href="/categories/kitchenware" class="text-center group cursor-pointer">
+                    <div class="bg-gray-100 rounded-xl p-4 sm:p-6 lg:p-8 mb-3 group-hover:bg-gray-200 transition-colors">
+                        <i class="fas fa-utensils text-2xl sm:text-3xl lg:text-4xl text-gray-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 text-sm sm:text-base">Kitchenware</h3>
+                </a>
+                <a href="/categories/lighting" class="text-center group cursor-pointer">
+                    <div class="bg-gray-100 rounded-xl p-4 sm:p-6 lg:p-8 mb-3 group-hover:bg-gray-200 transition-colors">
+                        <i class="fas fa-lightbulb text-2xl sm:text-3xl lg:text-4xl text-gray-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 text-sm sm:text-base">Lighting</h3>
+                </a>
+                <a href="/categories/hotel-furniture" class="text-center group cursor-pointer">
+                    <div class="bg-gray-100 rounded-xl p-4 sm:p-6 lg:p-8 mb-3 group-hover:bg-gray-200 transition-colors">
+                        <i class="fas fa-bed text-2xl sm:text-3xl lg:text-4xl text-gray-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 text-sm sm:text-base">Hotel Furniture</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner 1 -->
+    <section class="py-12 sm:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="banner-gradient-1 rounded-2xl p-8 sm:p-12 lg:p-16 text-white">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">New Collection 2024</h2>
+                        <p class="text-lg sm:text-xl mb-8 opacity-90">Discover our latest professional furniture designs crafted for modern hospitality spaces.</p>
+                        <button onclick="window.location.href='/collections/2024'" class="modern-btn-secondary text-gray-800">View Collection</button>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-white bg-opacity-20 rounded-2xl p-8 sm:p-12 inline-block">
+                            <i class="fas fa-star text-6xl sm:text-8xl text-white mb-4"></i>
+                            <p class="text-xl sm:text-2xl font-semibold">Premium Quality</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chairs Collection -->
+    <section class="py-16 sm:py-20 pb-24 sm:pb-32">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+            <div class="flex justify-between items-center mb-12 sm:mb-16">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">Professional Chairs</h2>
+                <div class="flex space-x-2">
+                    <button onclick="previousChairs()" class="nav-btn">
+                        <i class="fas fa-chevron-left text-gray-600"></i>
+                    </button>
+                    <button onclick="nextChairs()" class="nav-btn">
+                        <i class="fas fa-chevron-right text-gray-600"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="carousel-container px-4">
+                <div class="carousel-track" id="chairsTrack">
+                    <div class="carousel-item">
+                        <div class="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden product-card h-[480px] flex flex-col">
+                            <div class="bg-gray-100 h-64 flex items-center justify-center">
+                                <i class="fas fa-chair text-6xl text-gray-400"></i>
+                            </div>
+                            <div class="p-6 flex flex-col flex-1">
+                                <h3 class="font-bold text-gray-800 mb-2 text-lg">Executive Chair Pro</h3>
+                                <p class="text-gray-600 mb-4 flex-1">Ergonomic design with premium leather</p>
+                                <div class="flex justify-between items-center mb-4">
+                                    <span class="text-2xl font-bold text-blue-600">€299.99</span>
+                                    <span class="text-green-600 font-medium">In Stock</span>
+                                </div>
+                                <button class="w-full modern-btn text-white">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden product-card h-[480px] flex flex-col">
+                            <div class="bg-gray-100 h-64 flex items-center justify-center">
+                                <i class="fas fa-chair text-6xl text-gray-400"></i>
+                            </div>
+                            <div class="p-6 flex flex-col flex-1">
+                                <h3 class="font-bold text-gray-800 mb-2 text-lg">Dining Chair Classic</h3>
+                                <p class="text-gray-600 mb-4 flex-1">Comfortable wooden dining chair</p>
+                                <div class="flex justify-between items-center mb-4">
+                                    <span class="text-2xl font-bold text-blue-600">€89.99</span>
+                                    <span class="text-green-600 font-medium">In Stock</span>
+                                </div>
+                                <button class="w-full modern-btn text-white">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden product-card h-[480px] flex flex-col">
+                            <div class="bg-gray-100 h-64 flex items-center justify-center">
+                                <i class="fas fa-chair text-6xl text-gray-400"></i>
+                            </div>
+                            <div class="p-6 flex flex-col flex-1">
+                                <h3 class="font-bold text-gray-800 mb-2 text-lg">Bar Stool Modern</h3>
+                                <p class="text-gray-600 mb-4 flex-1">Adjustable height bar stool</p>
+                                <div class="flex justify-between items-center mb-4">
+                                    <span class="text-2xl font-bold text-blue-600">€149.99</span>
+                                    <span class="text-orange-600 font-medium">Low Stock</span>
+                                </div>
+                                <button class="w-full modern-btn text-white">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden product-card h-[480px] flex flex-col">
+                            <div class="bg-gray-100 h-64 flex items-center justify-center">
+                                <i class="fas fa-chair text-6xl text-gray-400"></i>
+                            </div>
+                            <div class="p-6 flex flex-col flex-1">
+                                <h3 class="font-bold text-gray-800 mb-2 text-lg">Lounge Chair Luxury</h3>
+                                <p class="text-gray-600 mb-4 flex-1">Premium comfort lounge chair</p>
+                                <div class="flex justify-between items-center mb-4">
+                                    <span class="text-2xl font-bold text-blue-600">€599.99</span>
+                                    <span class="text-red-600 font-medium">Out of Stock</span>
+                                </div>
+                                <button class="w-full bg-gray-400 text-white py-3 rounded-xl cursor-not-allowed" disabled>Notify Me</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden product-card h-[480px] flex flex-col">
+                            <div class="bg-gray-100 h-64 flex items-center justify-center">
+                                <i class="fas fa-chair text-6xl text-gray-400"></i>
+                            </div>
+                            <div class="p-6 flex flex-col flex-1">
+                                <h3 class="font-bold text-gray-800 mb-2 text-lg">Office Chair Deluxe</h3>
+                                <p class="text-gray-600 mb-4 flex-1">Premium office chair with lumbar support</p>
+                                <div class="flex justify-between items-center mb-4">
+                                    <span class="text-2xl font-bold text-blue-600">€399.99</span>
+                                    <span class="text-green-600 font-medium">In Stock</span>
+                                </div>
+                                <button class="w-full modern-btn text-white">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden product-card h-[480px] flex flex-col">
+                            <div class="bg-gray-100 h-64 flex items-center justify-center">
+                                <i class="fas fa-chair text-6xl text-gray-400"></i>
+                            </div>
+                            <div class="p-6 flex flex-col flex-1">
+                                <h3 class="font-bold text-gray-800 mb-2 text-lg">Outdoor Chair Set</h3>
+                                <p class="text-gray-600 mb-4 flex-1">Weather-resistant outdoor seating</p>
+                                <div class="flex justify-between items-center mb-4">
+                                    <span class="text-2xl font-bold text-blue-600">€199.99</span>
+                                    <span class="text-green-600 font-medium">In Stock</span>
+                                </div>
+                                <button class="w-full modern-btn text-white">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner 2 -->
+    <section class="py-12 sm:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="banner-gradient-2 rounded-2xl p-8 sm:p-12 lg:p-16 text-white">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="text-center lg:text-left">
+                        <div class="bg-white bg-opacity-20 rounded-2xl p-8 sm:p-12 inline-block">
+                            <i class="fas fa-truck text-6xl sm:text-8xl text-white mb-4"></i>
+                            <p class="text-xl sm:text-2xl font-semibold">Free Delivery</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Fast & Free Delivery</h2>
+                        <p class="text-lg sm:text-xl mb-8 opacity-90">Get your orders delivered within 48 hours across Belgium. Free delivery on orders over €500.</p>
+                        <button onclick="window.location.href='/delivery'" class="modern-btn-secondary text-gray-800">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tables Collection -->
+    <section class="py-16 sm:py-20 pb-24 sm:pb-32">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+            <div class="flex justify-between items-center mb-12 sm:mb-16">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">Professional Tables</h2>
+                <div class="flex space-x-2">
+                    <button onclick="previousTables()" class="nav-btn">
+                        <i class="fas fa-chevron-left text-gray-600"></i>
+                    </button>
+                    <button onclick="nextTables()" class="nav-btn">
+                        <i class="fas fa-chevron-right text-gray-600"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="carousel-container px-4">
+                <div class="carousel-track" id="tablesTrack">
+                    <div class="carousel-item">
+                        <div class="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden product-card h-[480px] flex flex-col">
+                            <div class="bg-gray-100 h-64 flex items-center justify-center">
+                                <i class="fas fa-table text-6xl text-gray-400"></i>
+                            </div>
+                            <div class="p-6 flex flex-col flex-1">
+                                <h3 class="font-bold text-gray-800 mb-2 text-lg">Dining Table Oak</h3>
+                                <p class="text-gray-600 mb-4 flex-1">Solid oak dining table for 6 people</p>
+                                <div class="flex justify-between items-center mb-4">
+                                    <span class="text-2xl font-bold text-blue-600">€799.99</span>
+                                    <span class="text-green-600 font-medium">In Stock</span>
+                                </div>
+                                <button class="w-full modern-btn text-white">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden product-card h-[480px] flex flex-col">
+                            <div class="bg-gray-100 h-64 flex items-center justify-center">
+                                <i class="fas fa-table text-6xl text-gray-400"></i>
+                            </div>
+                            <div class="p-6 flex flex-col flex-1">
+                                <h3 class="font-bold text-gray-800 mb-2 text-lg">Coffee Table Modern</h3>
+                                <p class="text-gray-600 mb-4 flex-1">Glass top coffee table</p>
+                                <div class="flex justify-between items-center mb-4">
+                                    <span class="text-2xl font-bold text-blue-600">€299.99</span>
+                                    <span class="text-green-600 font-medium">In Stock</span>
+                                </div>
+                                <button class="w-full modern-btn text-white">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden product-card h-[480px] flex flex-col">
+                            <div class="bg-gray-100 h-64 flex items-center justify-center">
+                                <i class="fas fa-table text-6xl text-gray-400"></i>
+                            </div>
+                            <div class="p-6 flex flex-col flex-1">
+                                <h3 class="font-bold text-gray-800 mb-2 text-lg">Conference Table</h3>
+                                <p class="text-gray-600 mb-4 flex-1">Large conference table for meetings</p>
+                                <div class="flex justify-between items-center mb-4">
+                                    <span class="text-2xl font-bold text-blue-600">€1,299.99</span>
+                                    <span class="text-orange-600 font-medium">Low Stock</span>
+                                </div>
+                                <button class="w-full modern-btn text-white">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden product-card h-[480px] flex flex-col">
+                            <div class="bg-gray-100 h-64 flex items-center justify-center">
+                                <i class="fas fa-table text-6xl text-gray-400"></i>
+                            </div>
+                            <div class="p-6 flex flex-col flex-1">
+                                <h3 class="font-bold text-gray-800 mb-2 text-lg">Bar Table High</h3>
+                                <p class="text-gray-600 mb-4 flex-1">High bar table for standing</p>
+                                <div class="flex justify-between items-center mb-4">
+                                    <span class="text-2xl font-bold text-blue-600">€449.99</span>
+                                    <span class="text-green-600 font-medium">In Stock</span>
+                                </div>
+                                <button class="w-full modern-btn text-white">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden product-card h-[480px] flex flex-col">
+                            <div class="bg-gray-100 h-64 flex items-center justify-center">
+                                <i class="fas fa-table text-6xl text-gray-400"></i>
+                            </div>
+                            <div class="p-6 flex flex-col flex-1">
+                                <h3 class="font-bold text-gray-800 mb-2 text-lg">Executive Desk</h3>
+                                <p class="text-gray-600 mb-4 flex-1">Premium executive office desk</p>
+                                <div class="flex justify-between items-center mb-4">
+                                    <span class="text-2xl font-bold text-blue-600">€999.99</span>
+                                    <span class="text-green-600 font-medium">In Stock</span>
+                                </div>
+                                <button class="w-full modern-btn text-white">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item">
+                        <div class="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden product-card h-[480px] flex flex-col">
+                            <div class="bg-gray-100 h-64 flex items-center justify-center">
+                                <i class="fas fa-table text-6xl text-gray-400"></i>
+                            </div>
+                            <div class="p-6 flex flex-col flex-1">
+                                <h3 class="font-bold text-gray-800 mb-2 text-lg">Outdoor Table Set</h3>
+                                <p class="text-gray-600 mb-4 flex-1">Weather-resistant outdoor dining table</p>
+                                <div class="flex justify-between items-center mb-4">
+                                    <span class="text-2xl font-bold text-blue-600">€549.99</span>
+                                    <span class="text-green-600 font-medium">In Stock</span>
+                                </div>
+                                <button class="w-full modern-btn text-white">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner 3 -->
+    <section class="py-12 sm:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 sm:p-12 lg:p-16 text-white">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Custom Solutions</h2>
+                        <p class="text-lg sm:text-xl mb-8 opacity-90">Need something specific? Our design team creates custom furniture solutions tailored to your business needs.</p>
+                        <button onclick="window.location.href='/custom'" class="modern-btn-secondary text-gray-800">Get Quote</button>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-white bg-opacity-20 rounded-2xl p-8 sm:p-12 inline-block">
+                            <i class="fas fa-drafting-compass text-6xl sm:text-8xl text-white mb-4"></i>
+                            <p class="text-xl sm:text-2xl font-semibold">Custom Design</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Modal -->
+    <div id="categoriesModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <!-- Modal Header -->
+            <div class="flex justify-between items-center p-6 border-b border-gray-200">
+                <h2 class="text-2xl font-bold text-gray-900">Categories</h2>
+                <button onclick="closeCategoriesModal()" class="text-gray-400 hover:text-gray-600 transition-colors">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            
+            <!-- Modal Content -->
+            <div class="p-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Chairs Section -->
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">Chairs</h3>
+                        <ul class="space-y-2">
+                            <li><a href="/categories/chairs/indoor" class="text-gray-600 hover:text-blue-600 transition-colors block py-1">Indoor Chairs</a></li>
+                            <li><a href="/categories/chairs/outdoor" class="text-gray-600 hover:text-blue-600 transition-colors block py-1">Outdoor Chairs</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Terrace Section -->
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">Terrace</h3>
+                        <ul class="space-y-2">
+                            <li><a href="/categories/terrace/chairs" class="text-gray-600 hover:text-blue-600 transition-colors block py-1">Terrace Chairs</a></li>
+                            <li><a href="/categories/terrace/tables" class="text-gray-600 hover:text-blue-600 transition-colors block py-1">Terrace Tables</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Tables Section -->
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">Tables</h3>
+                        <ul class="space-y-2">
+                            <li><a href="/categories/tables/horeca" class="text-gray-600 hover:text-blue-600 transition-colors block py-1">Horeca Tables</a></li>
+                            <li><a href="/categories/tables/tops" class="text-gray-600 hover:text-blue-600 transition-colors block py-1">Table Tops</a></li>
+                            <li><a href="/categories/tables/legs" class="text-gray-600 hover:text-blue-600 transition-colors block py-1">Table Legs</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Bar Stools Section -->
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">Bar Stools</h3>
+                        <ul class="space-y-2">
+                            <li><a href="/categories/bar-stools/indoor" class="text-gray-600 hover:text-blue-600 transition-colors block py-1">Indoor Bar Stools</a></li>
+                            <li><a href="/categories/bar-stools/outdoor" class="text-gray-600 hover:text-blue-600 transition-colors block py-1">Outdoor Bar Stools</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Event Section -->
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">Event</h3>
+                        <ul class="space-y-2">
+                            <li><a href="/categories/event/chairs" class="text-gray-600 hover:text-blue-600 transition-colors block py-1">Event Chairs</a></li>
+                            <li><a href="/categories/event/tables" class="text-gray-600 hover:text-blue-600 transition-colors block py-1">Event Tables</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Accessories Section -->
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">Accessories</h3>
+                        <ul class="space-y-2">
+                            <li><a href="/categories/accessories/cabinets" class="text-gray-600 hover:text-blue-600 transition-colors block py-1">Covered Cabinets</a></li>
+                            <li><a href="/categories/accessories/trash-cans" class="text-gray-600 hover:text-blue-600 transition-colors block py-1">Trash Cans</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Benches Section -->
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">Benches</h3>
+                        <ul class="space-y-2">
+                            <li><a href="/categories/benches" class="text-gray-600 hover:text-blue-600 transition-colors block py-1">Benches</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Outlet Section -->
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">Outlet</h3>
+                        <ul class="space-y-2">
+                            <li><a href="/outlet" class="text-red-600 hover:text-red-700 transition-colors block py-1 font-medium">Outlet</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Bottom Navigation - Fixed -->
+    <div class="sm:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-50">
+        <div class="flex justify-between items-center px-6 py-2">
+            <a href="#cart" class="flex flex-col items-center text-gray-600 hover:text-blue-600 transition-colors relative">
+                <i class="fas fa-shopping-cart text-lg"></i>
+                <span class="text-xs mt-1">Cart</span>
+                <span class="absolute -top-1 -right-1 bg-blue-600 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">2</span>
+            </a>
+            <a href="#account" class="flex flex-col items-center text-gray-600 hover:text-blue-600 transition-colors">
+                <i class="fas fa-user text-lg"></i>
+                <span class="text-xs mt-1">Account</span>
+            </a>
+            <a href="#wishlist" class="flex flex-col items-center text-gray-600 hover:text-blue-600 transition-colors relative">
+                <i class="fas fa-heart text-lg"></i>
+                <span class="text-xs mt-1">Wishlist</span>
+                <span class="absolute -top-1 -right-1 bg-blue-600 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">3</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 sm:py-16 mt-12 sm:mt-16 mb-16 sm:mb-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Main Footer Content -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12 text-left">
+                <!-- Categories -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Categories</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/categories/chairs" class="text-gray-300 hover:text-white transition-colors">Chairs</a></li>
+                        <li><a href="/categories/tables" class="text-gray-300 hover:text-white transition-colors">Tables</a></li>
+                        <li><a href="/categories/kitchen-equipment" class="text-gray-300 hover:text-white transition-colors">Kitchen Equipment</a></li>
+                        <li><a href="/categories/lighting" class="text-gray-300 hover:text-white transition-colors">Lighting</a></li>
+                        <li><a href="/categories/hotel-furniture" class="text-gray-300 hover:text-white transition-colors">Hotel Furniture</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Site Plan -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Site Plan</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="/products" class="text-gray-300 hover:text-white transition-colors">Products</a></li>
+                        <li><a href="/projects" class="text-gray-300 hover:text-white transition-colors">Projects</a></li>
+                        <li><a href="/references" class="text-gray-300 hover:text-white transition-colors">References</a></li>
+                        <li><a href="/contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Information -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Information</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/about" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="/delivery" class="text-gray-300 hover:text-white transition-colors">Delivery Info</a></li>
+                        <li><a href="/returns" class="text-gray-300 hover:text-white transition-colors">Returns</a></li>
+                        <li><a href="/privacy" class="text-gray-300 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="/terms" class="text-gray-300 hover:text-white transition-colors">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Contact Info</h3>
+                    <div class="space-y-3 text-gray-300">
+                        <p class="flex items-start">
+                            <i class="fas fa-map-marker-alt mr-3 mt-1"></i>
+                            <span>123 Business Street<br>Brussels, Belgium</span>
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-phone mr-3"></i>
+                            <span>+32 12 345 67 89</span>
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>info@horecadepot.be</span>
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-clock mr-3"></i>
+                            <span>Mon-Fri: 9AM-6PM</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="border-gray-700 mb-8">
+            
+            <!-- Bottom Footer -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <div class="text-left">
+                    <h2 class="text-2xl sm:text-3xl font-bold mb-2">HorecaDepot</h2>
+                    <p class="text-gray-300">Professional furniture solutions</p>
+                </div>
+                
+                <div class="text-left md:text-center">
+                    <h4 class="font-semibold mb-4">Payment Partners</h4>
+                    <div class="flex justify-start md:justify-center space-x-4">
+                        <i class="fab fa-cc-visa text-2xl text-gray-400"></i>
+                        <i class="fab fa-cc-mastercard text-2xl text-gray-400"></i>
+                        <i class="fab fa-paypal text-2xl text-gray-400"></i>
+                        <i class="fas fa-credit-card text-2xl text-gray-400"></i>
+                    </div>
+                </div>
+                
+                <div class="text-left md:text-right">
+                    <h4 class="font-semibold mb-4">Follow Us</h4>
+                    <div class="flex justify-start md:justify-end space-x-4">
+                        <a href="https://facebook.com/horecadepot" target="_blank" class="text-gray-300 hover:text-blue-400 transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="https://instagram.com/horecadepot" target="_blank" class="text-gray-300 hover:text-blue-400 transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/horecadepot" target="_blank" class="text-gray-300 hover:text-blue-400 transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://twitter.com/horecadepot" target="_blank" class="text-gray-300 hover:text-blue-400 transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="text-center text-gray-400 text-sm border-t border-gray-700 pt-8 mt-8">
+                <p>&copy; 2024 HorecaDepot. All rights reserved. | Professional furniture and equipment supplier</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Carousel state
+        let heroCurrentIndex = 0;
+        let chairsCurrentIndex = 0;
+        let tablesCurrentIndex = 0;
+
+        // Get items per view based on screen size
+        function getItemsPerView() {
+            if (window.innerWidth < 640) return 1; // mobile
+            if (window.innerWidth < 1024) return 2; // tablet
+            return 4; // desktop
+        }
+
+        // Update carousel position
+        function updateCarousel(trackId, currentIndex) {
+            const track = document.getElementById(trackId);
+            const itemsPerView = getItemsPerView();
+            const translateX = -(currentIndex * (100 / itemsPerView));
+            track.style.transform = `translateX(${translateX}%)`;
+        }
+
+        // Chairs carousel functions
+        function nextChairs() {
+            const track = document.getElementById('chairsTrack');
+            const totalItems = track.children.length;
+            const itemsPerView = getItemsPerView();
+            const maxIndex = totalItems - itemsPerView;
+            
+            chairsCurrentIndex = chairsCurrentIndex >= maxIndex ? 0 : chairsCurrentIndex + 1;
+            updateCarousel('chairsTrack', chairsCurrentIndex);
+        }
+
+        function previousChairs() {
+            const track = document.getElementById('chairsTrack');
+            const totalItems = track.children.length;
+            const itemsPerView = getItemsPerView();
+            const maxIndex = totalItems - itemsPerView;
+            
+            chairsCurrentIndex = chairsCurrentIndex <= 0 ? maxIndex : chairsCurrentIndex - 1;
+            updateCarousel('chairsTrack', chairsCurrentIndex);
+        }
+
+        // Hero carousel functions
+        function nextHero() {
+            const track = document.getElementById('heroTrack');
+            const totalItems = track.children.length;
+            
+            heroCurrentIndex = heroCurrentIndex >= totalItems - 1 ? 0 : heroCurrentIndex + 1;
+            const translateX = -(heroCurrentIndex * 100);
+            track.style.transform = `translateX(${translateX}%)`;
+            updateHeroIndicators();
+        }
+
+        function previousHero() {
+            const track = document.getElementById('heroTrack');
+            const totalItems = track.children.length;
+            
+            heroCurrentIndex = heroCurrentIndex <= 0 ? totalItems - 1 : heroCurrentIndex - 1;
+            const translateX = -(heroCurrentIndex * 100);
+            track.style.transform = `translateX(${translateX}%)`;
+            updateHeroIndicators();
+        }
+
+        function goToHeroSlide(index) {
+            const track = document.getElementById('heroTrack');
+            heroCurrentIndex = index;
+            const translateX = -(heroCurrentIndex * 100);
+            track.style.transform = `translateX(${translateX}%)`;
+            updateHeroIndicators();
+        }
+
+        function updateHeroIndicators() {
+            const indicators = document.querySelectorAll('.hero-indicator');
+            indicators.forEach((indicator, index) => {
+                if (index === heroCurrentIndex) {
+                    indicator.classList.remove('bg-gray-300');
+                    indicator.classList.add('bg-blue-600');
+                } else {
+                    indicator.classList.remove('bg-blue-600');
+                    indicator.classList.add('bg-gray-300');
+                }
+            });
+        }
+
+        // Tables carousel functions
+        function nextTables() {
+            const track = document.getElementById('tablesTrack');
+            const totalItems = track.children.length;
+            const itemsPerView = getItemsPerView();
+            const maxIndex = totalItems - itemsPerView;
+            
+            tablesCurrentIndex = tablesCurrentIndex >= maxIndex ? 0 : tablesCurrentIndex + 1;
+            updateCarousel('tablesTrack', tablesCurrentIndex);
+        }
+
+        function previousTables() {
+            const track = document.getElementById('tablesTrack');
+            const totalItems = track.children.length;
+            const itemsPerView = getItemsPerView();
+            const maxIndex = totalItems - itemsPerView;
+            
+            tablesCurrentIndex = tablesCurrentIndex <= 0 ? maxIndex : tablesCurrentIndex - 1;
+            updateCarousel('tablesTrack', tablesCurrentIndex);
+        }
+
+        // Search functionality
+        function toggleMobileSearch() {
+            const mobileSearch = document.getElementById('mobileSearch');
+            mobileSearch.classList.toggle('hidden');
+            if (!mobileSearch.classList.contains('hidden')) {
+                document.getElementById('mobileSearchInput').focus();
+            }
+        }
+
+        function performSearch() {
+            const searchInput = document.getElementById('searchInput');
+            if (searchInput.value.trim()) {
+                console.log('Desktop search for:', searchInput.value);
+                // Implement search functionality here
+            }
+        }
+
+        function performMobileSearch() {
+            const mobileSearchInput = document.getElementById('mobileSearchInput');
+            if (mobileSearchInput.value.trim()) {
+                console.log('Mobile search for:', mobileSearchInput.value);
+                // Implement search functionality here
+            }
+        }
+
+        function performTabletSearch() {
+            const tabletSearchInput = document.getElementById('tabletSearchInput');
+            if (tabletSearchInput.value.trim()) {
+                console.log('Tablet search for:', tabletSearchInput.value);
+                // Implement search functionality here
+            }
+        }
+
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        function closeMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.add('hidden');
+        }
+
+        function openCategoriesModal() {
+            const modal = document.getElementById('categoriesModal');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCategoriesModal() {
+            const modal = document.getElementById('categoriesModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Search event listeners
+            const searchInput = document.getElementById('searchInput');
+            const mobileSearchInput = document.getElementById('mobileSearchInput');
+            const tabletSearchInput = document.getElementById('tabletSearchInput');
+            
+            if (searchInput) {
+                searchInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        performSearch();
+                    }
+                });
+            }
+            
+            if (mobileSearchInput) {
+                mobileSearchInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        performMobileSearch();
+                    }
+                });
+            }
+
+            if (tabletSearchInput) {
+                tabletSearchInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        performTabletSearch();
+                    }
+                });
+            }
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(e) {
+                const mobileMenu = document.getElementById('mobileMenu');
+                const mobileMenuButton = e.target.closest('button[onclick="toggleMobileMenu()"]');
+                
+                if (!mobileMenu.contains(e.target) && !mobileMenuButton && !mobileMenu.classList.contains('hidden')) {
+                    closeMobileMenu();
+                }
+            });
+
+            // Close categories modal when clicking outside
+            document.addEventListener('click', function(e) {
+                const modal = document.getElementById('categoriesModal');
+                const modalContent = modal.querySelector('.bg-white');
+                const categoriesButton = e.target.closest('button[onclick="openCategoriesModal()"]');
+                
+                if (modal && !modal.classList.contains('hidden') && !modalContent.contains(e.target) && !categoriesButton) {
+                    closeCategoriesModal();
+                }
+            });
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    const modal = document.getElementById('categoriesModal');
+                    if (modal && !modal.classList.contains('hidden')) {
+                        closeCategoriesModal();
+                    }
+                }
+            });
+
+            // Add to cart functionality
+            document.querySelectorAll('button').forEach(button => {
+                if (button.textContent.includes('Add to Cart')) {
+                    button.addEventListener('click', function() {
+                        console.log('Product added to cart');
+                        // Implement cart functionality here
+                    });
+                }
+            });
+
+            // Initialize carousels
+            const heroTrack = document.getElementById('heroTrack');
+            heroTrack.style.transform = `translateX(0%)`;
+            updateHeroIndicators();
+            updateCarousel('chairsTrack', chairsCurrentIndex);
+            updateCarousel('tablesTrack', tablesCurrentIndex);
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            const heroTrack = document.getElementById('heroTrack');
+            const translateX = -(heroCurrentIndex * 100);
+            heroTrack.style.transform = `translateX(${translateX}%)`;
+            updateCarousel('chairsTrack', chairsCurrentIndex);
+            updateCarousel('tablesTrack', tablesCurrentIndex);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</html>
+    
